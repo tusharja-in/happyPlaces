@@ -15,7 +15,7 @@
         app:tint="@color/white"
         android:clickable="true"
         app:backgroundTint="@color/colorPrimary"
-        app:srcCompat="@drawable/ic_action_add_24dp" />
+        app:srcCompat="@drawable/ic_action_add_24dp"/>
 
 
 </FrameLayout>

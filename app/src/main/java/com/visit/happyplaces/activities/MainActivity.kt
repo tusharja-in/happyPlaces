@@ -1,9 +1,10 @@
-package com.visit.happyplaces
+package com.visit.happyplaces.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.visit.happyplaces.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val fabAddHappyPlace=findViewById<FloatingActionButton>(R.id.fabAddHappyPlace)
 
         fabAddHappyPlace.setOnClickListener{
-            val intent=Intent(this,AddHappyPlaceActivity::class.java)
+            val intent=Intent(this, AddHappyPlaceActivity::class.java)
             startActivity(intent)
         }
 

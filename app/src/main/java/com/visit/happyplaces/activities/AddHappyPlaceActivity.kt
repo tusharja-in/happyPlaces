@@ -104,7 +104,7 @@ class AddHappyPlaceActivity : AppCompatActivity(),View.OnClickListener {
             }
             // save button feature
             R.id.btn_save ->{
-                TODO("add data to database")
+                TODO("add data to database git test")
             }
         }
     }

@@ -13,16 +13,6 @@ class HappyPlaceDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_happy_place_detail)
 
-        val toolbar_add_place=findViewById<Toolbar>(R.id.toolbar_detail_happy_place)
-
-        setSupportActionBar(toolbar_add_place)
-        val actionBar=supportActionBar
-
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-        actionBar?.title="Happy Place Details"
-        toolbar_add_place.setNavigationOnClickListener{
-            onBackPressed()
-        }
 
     }
 

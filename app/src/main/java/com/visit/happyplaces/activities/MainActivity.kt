@@ -1,5 +1,6 @@
 package com.visit.happyplaces.activities
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         fabAddHappyPlace.setOnClickListener{
             val intent=Intent(this, AddHappyPlaceActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent,ADD_PLACE_ACTIVITY_REQUEST_CODE)
         }
         getHappyPlaceListFromLocalDB()
     }
@@ -46,6 +47,22 @@ class MainActivity : AppCompatActivity() {
             rv_happy_places_list.visibility= View.GONE
             tv_no_record_available.visibility=View.VISIBLE
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode== ADD_PLACE_ACTIVITY_REQUEST_CODE){
+            if(resultCode== Activity.RESULT_OK){
+                getHappyPlaceListFromLocalDB()
+            }
+            else{
+                Log.e("Activity","Back pressed or not added")
+            }
+        }
+    }
+
+    companion object{
+        var ADD_PLACE_ACTIVITY_REQUEST_CODE=1
     }
 
 }
